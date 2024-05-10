@@ -1,0 +1,557 @@
+  @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    font-size: 10px;
+    font-family: 'Inter', sans-serif;
+    background-color: #fcfeff;
+
+    
+}
+html {
+    scroll-behavior: smooth;
+}
+/* navbar section */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 7%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;  
+}
+.navbar .hero-icon {
+    font-size: 1.9rem;
+    font-weight: 700px;
+    color:  rgb(11, 11, 11);
+    font-family: serif;
+}
+.navbar .navbar-list {
+   font-size: 1.3rem;
+   display: flex;
+   justify-content: space-between;
+   width: 35%;
+}
+.navbar .navbar-list a {
+    display: inline-block;
+    color: rgb(11, 11, 11);
+    font-weight: 300px;
+    transition: .3s linear;
+}
+
+.navbar .navbar-list a:hover{
+    color: rgb(173, 99, 47);
+}
+.navbar .navbar-list a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.6rem;
+    border-bottom: 0.1rem solid rgb(173, 99, 47);
+    transform: scaleX(0);
+    transition: .3s linear;
+}
+
+.navbar .navbar-list a:hover::after {
+    transform: scaleX(.6);
+}
+.navbar .navbar-icon #menu {
+    display: none;
+}
+.navbar .navbar-icon {
+    display: flex;
+    width: 10%;
+    justify-content: space-between;
+    /* background-color: aqua; */
+}
+.navbar .navbar-icon a span {
+    color:  rgb(11, 11, 11);
+    display: inline-block;
+    font-size: 1.8rem;
+    transition: .3s linear;
+}
+
+.navbar .navbar-icon a span:hover {
+    color:  rgb(173, 99, 47);
+   
+}
+
+/* home section */
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+.home .hero-img {
+    overflow: hidden;
+}
+.home .hero-img img{
+   width: 500px;
+   transition: .5s;
+}
+
+.home .hero-img img:hover{
+   transform: scale(1.1);
+ }
+
+.home .content {
+    width: 40rem;
+   
+}
+.home .content h1 {
+    font-size: 5rem;
+    line-height: 6rem;
+    text-shadow: 1px 1px 2px  rgb(61, 59, 59) ;
+}
+.home .content h1 span {
+    font-size: 5rem;
+    font-family: serif;
+}
+
+/* profil section */
+.profil {
+    height: 100vh;
+    padding-top: 10rem;
+    background-color: rgb(190, 192, 192);
+    /* display: flex;
+   flex-direction: column;
+   align-items: center; */
+}
+
+.profil .header {
+    width: 80%;
+    margin: auto;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+
+}
+ .profil .header .vounder {
+    margin: auto;  
+   
+ }
+ .profil .header .vounder img{
+    box-shadow: 0px 2px 4px 2px  rgba(0, 0, 0, 0.12),  10px 10px 2px 2px  rgba(0, 0, 0, 0.12);
+    width: 450px;
+    cursor: pointer;
+    border-radius: 5%;
+ }
+
+
+.profil .header .vounder-p {
+    /* margin-left: 5rem; */
+    width: 50%;
+   font-weight: 600;
+   margin-top: 4.6em;
+   width: auto;
+   height: max-content;
+   text-align: center;
+}
+.profil .header .vounder-p p {
+    font-size: 1.4rem;
+    color:  rgb(47, 47, 47);
+}
+
+/* menu section */
+.menu .header {
+  margin-left: 43%;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+}
+.menu .header h1 {
+    font-size: 3rem;
+    font-family: serif;
+}
+.menu {
+    height: 200%;
+    background-color: #ffffff;
+    padding-top: 8rem;
+}
+.menu .container{
+    width: 95%;
+    margin: auto;
+}
+
+
+.menu .container  {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: auto;
+    width: 90%;
+}
+
+.menu .container  .card {
+    width: 13rem;
+    padding: 1rem;
+    margin-top: 4em;
+    transition: .8s;
+    margin-left: 3rem;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0px 2px 4px 2px  rgba(14, 30, 37, 0.12),  10px 10px 4px 2px  rgba(14, 30, 37, 0.12) ;
+}
+
+
+.menu .container  .card:hover {
+    transform: scale(1.1);
+   
+}
+.menu .container  .card .gambar img {
+    transition: .3s;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.menu .container .card .price {
+    text-align: center;
+    margin-top: 3em;
+    
+}
+
+.menu .container .card .price h1{
+    font-size: 2.3em;
+    font-weight: 700;
+    font-family: serif;
+   
+}
+.menu .container  .card .price h3{
+    font-size: 1.8em;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+.menu .container .container-card .card .price button{
+    border: none;
+    font-size: 1.7em;
+    font-family: arial;
+    padding: .3em;
+    background-color: rgb(8, 177, 8);
+}
+.menu .container .container-card .card .price button a {
+    color: #fffafa;
+}
+
+.contact {
+    height: 100vh;
+    padding: 7rem 5%;
+}
+
+.contact .peta {
+    display: flex;
+    margin-top: 2rem;
+    background-color:  rgb(190, 192, 192);
+    box-shadow: 0px 2px 4px 2px   rgba(0, 0, 0, 0.12),  10px 10px 4px 2px  rgba(0, 0, 0, 0.12) ;
+}
+
+.contact .peta .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+  
+}
+.contact .peta form {
+    flex:  1 1 45rem;
+    text-align: center;
+    padding: 5rem 2rem;
+    border: none;
+}
+.contact .peta form .isi-kontak {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    border: 2px solid  white;
+    padding-left: 2rem;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.contact .peta form .isi-kontak input {
+    width: 100%;
+    padding: 1.5rem;
+    color: #ffffff;
+    font-size: 1.3rem;
+    border: none;
+    background: none;
+}
+.contact .peta form .btn {
+    margin-top: 3rem;
+    border: none;
+    font-size: 1.6rem;
+    background-color: black;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    font-family: serif;
+    letter-spacing: 1px;
+    transition:  .3s;
+    cursor: pointer;
+}
+.contact .peta form .btn:hover {
+    background-color:  rgb(173, 99, 47);
+    color: black;
+}
+
+.contact .peta form .isi-kontak span {
+    color: white;
+    text-align: center;
+}
+
+/* footer */
+.footer {
+    margin-top: 15rem;
+    background-color: black;
+    width: 100%;
+    color: #ffffff;
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+    padding: 1rem;
+}
+.footer .container {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+
+}
+.footer .container .keterangan h1 {
+    font-size: 2rem;
+    font-family: serif;
+}
+.footer .container .keterangan p{
+    margin-top: .3rem;
+    font-size: .9rem;
+}
+.footer .container .list {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.footer .container .list a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    display: inline-block;
+    transition: .3s linear;
+}
+.footer .container  a:hover{
+    color: rgb(173, 99, 47);
+}
+/* .footer .container a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.6rem;
+    border-bottom: 0.1rem solid rgb(173, 99, 47);
+    transform: scaleX(0);
+    transition: .3s linear;
+}
+.footer .container a:hover::after {
+    transform: scaleX(.6);
+} */ 
+
+
+
+
+
+
+
+
+/* responsive */
+
+/* laptop */
+@media (max-width: 1280px) {
+    html {
+        font-size: 90%;
+    } 
+    .navbar .hero-icon {
+        font-size: 2.5rem;
+    }
+    .navbar .navbar-list{
+        font-size: 1.4rem;
+    }
+    .navbar .navbar-icon a span {
+        font-size: 2rem;
+    }
+    
+     .home .content {
+        width: 35rem;
+    } 
+    .home .content h1,
+    .home .content h1 span {
+       font-size: 4.1rem;
+    }
+
+     .home .hero-img img {
+        width: 400px;
+     }
+     .profil .header.vounder-p p {
+        font-size: 1.6em;
+     }
+     .profil .header.vounder img {
+        width: 400px;
+     }
+     .menu .container .header {
+        margin-top: 2em;
+     }
+}
+
+
+/* tablet */
+@media (max-width: 1024px){
+    html {
+        font-size: 80%;
+    }
+    .navbar .navbar-list {
+        position: absolute;
+        right: -100%;
+    }
+    .navbar .navbar-icon #menu {
+        display: block;
+    }
+    .navbar .navbar-icon {
+        width: 20%;
+        margin: auto 2%;
+    }
+
+    .navbar .navbar-icon a span {
+        font-size: 2rem;
+    }
+    .navbar .hero-icon {
+        font-size: 2.5rem;
+    }
+
+    .home {
+        flex-direction: column;
+        padding-top: 3rem;
+    }
+    .home .content {
+        width: 40rem;
+        /* background-color: aqua; */
+        text-align: center;
+
+    } 
+    .home .content h1,
+    .home .content h1 span {
+       font-size: 4rem;
+
+    }
+
+     .home .hero-img img {
+        width: 400px;
+     }
+     
+    .profil .header .vounder img{
+      width: 370px;
+    }
+    .profil .header .vounder-p p {
+        font-size: 1.8em;
+    }
+    .profil .header .vounder-p {
+        margin-top: 7em;
+    }
+    .menu .container {
+        margin-top: 3em;
+    }
+    .menu  .header{
+        margin: auto;
+        width: max-content;
+    }
+    .menu  .header h1 {
+        width: max-content;
+        font-size: 3.5rem;
+    }
+    .contact .peta {
+        flex-wrap: wrap;
+    }
+    .contact .peta .map {
+        height: 20rem;
+    }
+
+    
+}
+
+/* phone */
+@media (max-width: 580px) {
+    html {
+        font-size: 75%;
+    }
+    .navbar .navbar-icon {
+        width: 25%;
+        justify-content: space-between;
+    }
+
+   .navbar .hero-icon {
+    font-size: 2.5rem;
+   }
+
+   .home {
+    flex-direction: column;
+   }
+
+
+   .home .content {
+    width: 35rem;
+    /* background-color: aqua; */
+    text-align: center;
+
+} 
+.home .content h1,
+.home .content h1 span {
+   font-size: 3.5rem;
+   margin-top: -5rem;
+}
+
+.home .hero-img img {
+    width: 350px;
+ }
+ .profil .header .vounder{
+    margin-top: 2em;
+ }
+ .profil .header .vounder img{
+    width: 300px;
+  }
+
+.menu  .header{
+    margin: auto;
+    width: max-content;
+}
+.menu  .header h1 {
+    width: max-content;
+    font-size: 3.5rem;
+}
+
+.menu .container .container-card  {
+  margin: 3em auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.menu .container .card .gambar img {
+   width: 200px
+}
+.menu .container  .card {
+    margin-bottom: 4em;
+    width: max-content;
+    margin: 4em auto;
+}
+.menu .container  .card .price {
+    margin-top: 1em;
+}
+
+.menu .container .card .price h1 {
+    font-size: 2.5em;
+}
+}
