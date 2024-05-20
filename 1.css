@@ -4,6 +4,8 @@
     --color-text: #333;
     --color-text-2: rgb(8, 8, 8);
     --background: rgb(8, 8, 8);
+    --color-coffe: rgb(173, 99, 47); 
+    --trasition: .3s linear;
 }
 
 * {
@@ -54,17 +56,17 @@ html {
     display: inline-block;
     color: rgb(11, 11, 11);
     font-weight: 300px;
-    transition: .3s linear;
+    transition: var(--trasition);
 }
 
 .navbar .navbar-list a:hover{
-    color: rgb(173, 99, 47);
+    color: var(--color-coffe);
 }
 .navbar .navbar-list a::after {
     content: '';
     display: block;
     padding-bottom: 0.6rem;
-    border-bottom: 0.1rem solid rgb(173, 99, 47);
+    border-bottom: 0.1rem solid var(--color-coffe);
     transform: scaleX(0);
     transition: .3s linear;
 }
@@ -89,7 +91,7 @@ html {
 }
 
 .navbar .navbar-icon a span:hover {
-    color:  rgb(173, 99, 47);
+    color: var(--color-coffe);
    
 }
 
@@ -245,7 +247,6 @@ html {
     font-size: 1.7em;
     font-family: arial;
     padding: .3em;
-    background-color: rgb(8, 177, 8);
 }
 .menu .container .container-card .card .price button a {
     color: #fffafa;
@@ -307,8 +308,9 @@ html {
     cursor: pointer;
 }
 .contact .peta form .btn:hover {
-    background-color:  rgb(173, 99, 47);
+    background-color:  var(--color-coffe);
     color: black;
+    transition: var(--trasition);
 }
 
 .contact .peta form .isi-kontak span {
@@ -318,7 +320,7 @@ html {
 
 /* footer */
 .footer {
-    margin-top: 15rem;
+    margin-top: 18rem;
     background-color: black;
     width: 100%;
     color: #ffffff;
@@ -334,12 +336,20 @@ html {
 
 }
 .footer .container .keterangan h1 {
+    color: white;
     font-size: 2rem;
     font-family: serif;
 }
-.footer .container .keterangan p{
+.footer .container  p{
     margin-top: .3rem;
     font-size: .9rem;
+    font-weight: 600;
+}
+
+.footer .container p:hover {
+    color: var(--color-coffe);
+    transition: var(--trasition);
+    cursor: pointer;
 }
 .footer .container .list {
     width: 30%;
@@ -356,7 +366,7 @@ html {
     transition: .3s linear;
 }
 .footer .container  a:hover{
-    color: rgb(173, 99, 47);
+    color: var(--color-coffe);
 }
 /* .footer .container a::after {
     content: '';
@@ -562,5 +572,9 @@ html {
 
 .menu .container .card .price h1 {
     font-size: 2.5em;
+}
+
+.footer .container .list {
+    display: none;
 }
 }
