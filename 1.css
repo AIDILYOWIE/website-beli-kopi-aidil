@@ -1,5 +1,11 @@
   @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
+:root{
+    --color-text: #333;
+    --color-text-2: rgb(8, 8, 8);
+    --background: rgb(8, 8, 8);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -27,13 +33,16 @@ html {
     top: 0;
     right: 0;
     left: 0;
-    z-index: 999;  
+    z-index: 999;
+    background-color: rgb(255, 255, 255, .50);
+    border-bottom: 1px solid black; 
 }
+
 .navbar .hero-icon {
     font-size: 1.9rem;
     font-weight: 700px;
     color:  rgb(11, 11, 11);
-    font-family: serif;
+    font-family: serif; 
 }
 .navbar .navbar-list {
    font-size: 1.3rem;
@@ -123,7 +132,7 @@ html {
 .profil {
     height: 100vh;
     padding-top: 10rem;
-    background-color: rgb(190, 192, 192);
+    background-color: var(--color-text);
     /* display: flex;
    flex-direction: column;
    align-items: center; */
@@ -142,7 +151,7 @@ html {
    
  }
  .profil .header .vounder img{
-    box-shadow: 0px 2px 4px 2px  rgba(0, 0, 0, 0.12),  10px 10px 2px 2px  rgba(0, 0, 0, 0.12);
+    box-shadow: rgba(216, 211, 211, 0.22) 0px 19px 38px, rgba(216, 211, 211, 0.22) 0px 15px 12px;
     width: 450px;
     cursor: pointer;
     border-radius: 5%;
@@ -160,7 +169,7 @@ html {
 }
 .profil .header .vounder-p p {
     font-size: 1.4rem;
-    color:  rgb(47, 47, 47);
+    color: rgb(224, 217, 217) ;
 }
 
 /* menu section */
